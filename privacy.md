@@ -55,6 +55,34 @@ camera is used; that cannot be turned off, and we would not want it to be.
 In-app purchases are handled entirely by Apple. We never see your payment
 details. Veilbox asks Apple whether a purchase is active and nothing more.
 
+## Keeping and deleting your data
+
+Apple's App Review Guidelines require every privacy policy to say how long data
+is kept and how you get rid of it. For Veilbox that is unusually simple, because
+almost none of it is ours to keep.
+
+**On your iPhone.** Photos stay until you delete them. A deleted photo goes to
+Recently Deleted and is recoverable for 30 days, then erased permanently. You can
+empty that folder immediately from inside the app. Deleting the app removes
+everything it stored on the device.
+
+**In iCloud.** Only if you turned backup on, and only into *your own* iCloud
+account — we have no server and receive nothing. Settings → Danger zone →
+**Remove everything from iCloud** deletes the cloud copy and turns backup off,
+leaving the photos on your phone untouched. This is free and does not require a
+subscription.
+
+**Getting your data out.** Settings → **Export photos** saves everything, or one
+album, back to your camera roll. Also free, and always will be — a subscription
+that lapsed can never strand your own photos.
+
+**Withdrawing permission.** Photo library and camera access can be revoked at any
+time in the iOS Settings app under Veilbox. The app keeps working; it simply
+stops being able to import or capture.
+
+**What we hold.** Nothing. There is no account, no server, and no analytics, so
+there is no record of you to request the deletion of.
+
 ## Children
 
 Veilbox is not directed at children and collects no data from anyone.
