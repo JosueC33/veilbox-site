@@ -54,5 +54,5 @@ out loud: [Why you can trust Veilbox](security.html).
 
 ## Requirements
 
-iPhone running iOS 16 or later. iCloud backup needs an iCloud account and
+iPhone or iPad running iOS 16 or later; runs on Apple Silicon Macs too. iCloud backup needs an iCloud account and
 Veilbox Pro.
