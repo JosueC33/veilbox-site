@@ -46,6 +46,12 @@ vault, and nothing inside it shows that a real vault exists.
 Deleted photos stay recoverable for 30 days, then are erased for good. They
 still take up space on your phone until then.
 
+## How your photos are protected
+
+The full security explainer — how the encryption works, what leaves your
+device and what never does, why we collect nothing, and the limits we state
+out loud: [Why you can trust Veilbox](security.html).
+
 ## Requirements
 
 iPhone running iOS 16 or later. iCloud backup needs an iCloud account and
