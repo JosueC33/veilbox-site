@@ -92,6 +92,11 @@ Veilbox is not directed at children and collects no data from anyone.
 If this policy ever changes, the date at the top changes with it. The full
 history is public in the [repository for this site](https://github.com/JosueC33/veilbox-site).
 
+## Prefer slides?
+
+The same policy, as a short deck: [Privacy, in 8 slides](privacy-deck.html).
+This page remains the canonical policy.
+
 ## Contact
 
 [Open an issue on GitHub](https://github.com/JosueC33/veilbox-site/issues).

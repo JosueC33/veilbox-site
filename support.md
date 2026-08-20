@@ -52,6 +52,8 @@ The full security explainer — how the encryption works, what leaves your
 device and what never does, why we collect nothing, and the limits we state
 out loud: [Why you can trust Veilbox](security.html).
 
+Prefer slides? [This page, as a deck](support-deck.html).
+
 ## Requirements
 
 iPhone or iPad running iOS 16 or later; runs on Apple Silicon Macs too. iCloud backup needs an iCloud account and

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veilbox — Privacy Policy</title>
+<style>
+  /* Same deck format as trust-security.html: Veilbox black + orange, one
+     deliberate dark theme, scroll-snap slides with arrow-key navigation.
+     Every claim here is taken from the published policy at
+     veilbox-site/privacy.md — this is a presentation of that document, not a
+     second version of it. If the policy changes, this changes with it. */
+  :root{
+    --bg:#0a0a0b; --card:#161618; --card2:#1d1d20; --line:rgba(255,255,255,.10);
+    --txt:#f5f5f7; --dim:#9a9aa2; --dimmer:#6b6b70;
+    --accent:#e8964b; --accent-dim:rgba(232,150,75,.14); --good:#30d158; --bad:#ff6961;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .slide{min-height:100vh;scroll-snap-align:start;position:relative;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:72px 24px 88px}
+  .inner{width:min(880px,100%)}
+  .kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--accent);background:var(--accent-dim);
+    padding:5px 12px;border-radius:20px;margin-bottom:18px}
+  h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.06;text-wrap:balance}
+  h2{font-size:clamp(26px,4.4vw,40px);font-weight:800;letter-spacing:-.015em;line-height:1.12;
+    margin-bottom:18px;text-wrap:balance}
+  .lede{font-size:clamp(16px,2.2vw,20px);color:var(--dim);line-height:1.55;max-width:62ch;margin-top:16px}
+  .lede strong{color:var(--txt)}
+  p{color:var(--dim);line-height:1.6;font-size:15.5px}
+  .num{position:absolute;top:26px;right:34px;font-size:12px;color:var(--dimmer);letter-spacing:.1em}
+  .hint{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:var(--dimmer);
+    font-size:12px;z-index:5;background:rgba(10,10,11,.7);padding:6px 14px;border-radius:20px;backdrop-filter:blur(6px)}
+  .titleicon{width:108px;height:108px;border-radius:24px;box-shadow:0 12px 40px rgba(232,150,75,.25);margin-bottom:28px}
+  .center{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .stamp{margin-top:22px;font-size:13px;color:var(--dimmer);letter-spacing:.04em}
+  /* lists */
+  ul{list-style:none;margin-top:22px}
+  li{font-size:15.5px;color:var(--dim);line-height:1.6;padding:10px 0 10px 30px;position:relative;
+    border-bottom:1px solid rgba(255,255,255,.05)}
+  li:last-child{border-bottom:none}
+  li::before{content:"•";position:absolute;left:6px;color:var(--accent);font-weight:700}
+  li em{color:var(--txt);font-style:normal;font-weight:600}
+  ul.never li::before{content:"✕";color:var(--accent);font-weight:800;font-size:13px}
+  ul.stay li::before{content:"▪";color:var(--accent)}
+  /* two-column */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .col h3{font-size:13.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+  .col.a h3{color:var(--dim)} .col.b h3{color:var(--accent)}
+  .col li{font-size:14px;padding:8px 0 8px 24px}
+  /* cards */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-top:14px}
+  .card b{font-size:15.5px;display:block;margin-bottom:4px}
+  .card span{color:var(--dim);font-size:14px;line-height:1.55;display:block}
+  .card .path{color:var(--accent);font-weight:600}
+  blockquote{border-left:3px solid var(--accent);padding:6px 0 6px 18px;margin-top:24px;
+    font-size:16px;color:var(--txt);line-height:1.55;font-weight:500;max-width:56ch}
+  .free{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--good);
+    background:rgba(48,209,88,.14);padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:2px}
+  .endlinks{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;justify-content:center}
+  .btn{background:var(--accent);color:#141414;font-weight:700;font-size:14.5px;
+    padding:11px 22px;border-radius:12px;text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  @media(max-width:700px){.cols{grid-template-columns:1fr}.num{display:none}}
+</style>
+</head>
+<body>
+
+<!-- 1 · title -->
+<section class="slide">
+  <div class="inner center">
+    <img class="titleicon" src="data:image/png;base64,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AACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAANx3/DwcOEMTaoEQ6AAAAAElFTkSuQmCC" alt="Veilbox">
+    <span class="kicker">Veilbox · Privacy Policy</span>
+    <h1>The shortest privacy<br>policy we could write</h1>
+    <p class="lede">Because there is genuinely very little to say. <strong>Veilbox does not collect, transmit, or sell any personal information.</strong></p>
+    <div class="stamp">Last updated 9 August 2026</div>
+  </div>
+  <div class="num">1 / 8</div>
+</section>
+
+<!-- 2 · the whole thing in one slide -->
+<section class="slide">
+  <div class="inner">
+    <span class="kicker">The whole policy, in one breath</span>
+    <h2>No accounts. No analytics. No ads. No tracking. No crash reporting.</h2>
+    <ul class="never">
+      <li>No <em>account</em> — there is nothing to sign up for, and nothing to sign in to</li>
+      <li>No <em>analytics</em> — the app does not measure you or phone home</li>
+      <li>No <em>advertising</em> and no ad networks</li>
+      <li>No <em>tracking</em> of any kind, across apps or anywhere else</li>
+      <li>No <em>crash reporting</em> — not even the kind most apps consider harmless</li>
+    </ul>
+    <blockquote>There is no record of you to hand over, sell, lose, or be compelled to produce.</blockquote>
+  </div>
+  <div class="num">2 / 8</div>
+</section>
+
+<!-- 3 · what stays on the device -->
+<section class="slide">
+  <div class="inner">
+    <span class="kicker">What stays on your iPhone</span>
+    <h2>Everything — unless you turn on iCloud backup</h2>
+    <p class="lede">These are stored on your own device and are never sent anywhere:</p>
+    <ul class="stay">
+      <li><em>Your photos and videos</em>, encrypted with AES-256</li>
+      <li><em>Your vault code</em> — stored only as a one-way hash, never in readable form</li>
+      <li><em>Your encryption keys</em>, held in the iOS Keychain</li>
+      <li><em>Albums, dates, and app settings</em></li>
+    </ul>
+  </div>
+  <div class="num">3 / 8</div>
+</section>
+
+<!-- 4 · icloud -->
+<section class="slide">
+  <div class="inner">
+    <span class="kicker">If you turn on iCloud backup</span>
+    <h2>It goes to <em>your</em> iCloud — and it is already unreadable when it leaves</h2>
+    <p class="lede">Encrypted data is copied to a private database only your Apple Account can reach. <strong>We have no server and receive nothing.</strong></p>
+    <div class="cols">
+      <div class="col a">
+        <h3>Encrypted before it leaves</h3>
+        <ul>
+          <li>Your photos and videos</li>
+          <li><em>The metadata too</em> — album membership, dates and deletion state are sealed, because how a vault is organised is itself revealing</li>
+          <li>Apple stores it and cannot read it. Neither can we.</li>
+        </ul>
+      </div>
+      <div class="col b">
+        <h3>Your code never goes up</h3>
+        <ul>
+          <li>What is uploaded is your encryption key <em>wrapped</em> under a key derived from your code — PBKDF2-HMAC-SHA256, 600,000 rounds</li>
+          <li>Without the code it is unusable ciphertext</li>
+          <li>This is what lets the same code open your vault on a new phone — and why a forgotten code cannot be recovered by anyone</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="num">4 / 8</div>
+</section>
+
+<!-- 5 · permissions -->
+<section class="slide">
+  <div class="inner">
+    <span class="kicker">Permissions</span>
+    <h2>Asked for narrowly, and only when you act</h2>
+    <div class="card">
+      <b>📷 Photo library</b>
+      <span>Permission to read photos is requested only when you import — and only <em>add-only</em> permission when you export back to your camera roll. The app never browses your library on its own.</span>
+    </div>
+    <div class="card">
+      <b>🎥 Camera</b>
+      <span>Only if you enable the break-in log, which photographs whoever enters a wrong code. Those photos are encrypted in your vault and never leave your device unless backup is on. iOS always shows the green camera indicator when the camera is used — that cannot be turned off, and we would not want it to be.</span>
+    </div>
+    <div class="card">
+      <b>💳 Purchases</b>
+      <span>Handled entirely by Apple. We never see your payment details. Veilbox asks Apple whether a purchase is active, and nothing more.</span>
+    </div>
+  </div>
+  <div class="num">5 / 8</div>
+</section>
+
+<!-- 6 · keeping and deleting -->
+<section class="slide">
+  <div class="inner">
+    <span class="kicker">Keeping and deleting your data</span>
+    <h2>Almost none of it is ours to keep</h2>
+    <div class="card">
+      <b>On your iPhone</b>
+      <span>Photos stay until you delete them. A deleted photo goes to Recently Deleted, is recoverable for 30 days, then is erased permanently — and you can empty that folder immediately from inside the app. Deleting the app removes everything it stored.</span>
+    </div>
+    <div class="card">
+      <b>In iCloud <span class="free">FREE</span></b>
+      <span>Only if you turned backup on, and only into your own account. <span class="path">Settings → Danger zone → Remove everything from iCloud</span> deletes the cloud copy and turns backup off, leaving the photos on your phone untouched. No subscription required.</span>
+    </div>
+    <div class="card">
+      <b>Getting your data out <span class="free">FREE</span></b>
+      <span><span class="path">Settings → Export photos</span> saves everything, or one album, back to your camera roll. Always free — a subscription that lapsed can never strand your own photos.</span>
+    </div>
+    <div class="card">
+      <b>Withdrawing permission</b>
+      <span>Photo library and camera access can be revoked any time in iOS Settings under Veilbox. The app keeps working; it simply stops being able to import or capture.</span>
+    </div>
+  </div>
+  <div class="num">6 / 8</div>
+</section>
+
+<!-- 7 · what we hold -->
+<section class="slide">
+  <div class="inner center">
+    <span class="kicker">What we hold about you</span>
+    <h1 style="font-size:clamp(52px,11vw,110px)">Nothing.</h1>
+    <p class="lede" style="text-align:center">There is no account, no server, and no analytics — so there is no record of you to request the deletion of.</p>
+    <blockquote style="margin-top:30px;text-align:left">Veilbox is not directed at children, and collects no data from anyone.</blockquote>
+  </div>
+  <div class="num">7 / 8</div>
+</section>
+
+<!-- 8 · changes + contact -->
+<section class="slide">
+  <div class="inner center">
+    <span class="kicker">Changes &amp; contact</span>
+    <h2>If this policy ever changes,<br>the date at the top changes with it</h2>
+    <p class="lede" style="text-align:center">The full history is public — every edit to this policy is a commit anyone can read.</p>
+    <div class="endlinks">
+      <a class="btn" href="https://josuec33.github.io/veilbox-site/privacy">Full Privacy Policy</a>
+      <a class="btn ghost" href="https://github.com/JosueC33/veilbox-site">Policy history</a>
+      <a class="btn ghost" href="https://github.com/JosueC33/veilbox-site/issues">Contact</a>
+    </div>
+    <p style="margin-top:28px;font-size:13px;color:var(--dimmer)">This deck presents the published policy. Where the two could ever differ, the published policy is the one that counts.</p>
+  </div>
+  <div class="num">8 / 8</div>
+</section>
+
+<div class="hint">scroll or press ↓ to advance</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let idx=0;
+  const sync=()=>{const y=window.scrollY+innerHeight/2;
+    idx=slides.findIndex(s=>y>=s.offsetTop&&y<s.offsetTop+s.offsetHeight);
+    if(idx<0)idx=0;};
+  addEventListener('scroll',sync,{passive:true});
+  addEventListener('keydown',e=>{
+    if(['ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();sync();
+      slides[Math.min(idx+1,slides.length-1)].scrollIntoView({behavior:'smooth'});}
+    if(['ArrowUp','PageUp'].includes(e.key)){e.preventDefault();sync();
+      slides[Math.max(idx-1,0)].scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>
